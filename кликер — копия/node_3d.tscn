@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d0ksgf2s1miy8"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4kxuq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mti6b"]
+
+[node name="Node3D" type="Node3D" unique_id=1192694590]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=943160867]
+transform = Transform3D(19.326591, 0, 0, 0, 0.4509211, 0, 0, 0, 7.8886786, 0, 0, 1.4681194)
+size = Vector3(1, 1, 1.5838623)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=214259975]
+transform = Transform3D(0.7726219, 0, 0, 0, 0.85908854, 0, 0, 0, 0.63180834, 0.22759491, 0.53049624, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=780992028]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_4kxuq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1915170031]
+transform = Transform3D(0.99038476, 0, 0, 0, 0.9999993, 0, 0, 0, 0.99999976, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_mti6b")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1574634569]
+transform = Transform3D(1.2942941, 0, 0, 0, 1.1640244, 0, 0, 0, 1.5827584, 0.047873378, 0.8055315, -0.1521087)
